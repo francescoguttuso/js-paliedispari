@@ -9,3 +9,22 @@ function isPalindroma (parola) {
 }
 console.log (isPalindroma ("Casa"));
 
+
+const userNumber = 3; 
+
+if (userNumber < 1 || userNumber > 5) {
+    console.error("Non è un numero valido");
+} else {
+    console.log("Numero accettato!");
+}  
+
+function isEvenOrOdd (number) {
+   number = Math.floor(Math.random() * 6) + 1;
+   return;
+}
+console.log (isEvenOrOdd);
+
+function somma (a, b) {
+    const sommaNumber = a + b;
+    return sommaNumber;
+}
