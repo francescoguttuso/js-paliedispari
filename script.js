@@ -12,9 +12,12 @@ if (parola) {
     console.log(`É Palindroma: ${isPalindroma(parola)}`);
 }
 
+
+
 //---esercizio Pari o Dispari---
 //chiedo all'utente di inserire un numero da 1 a 5
 
+const userChoice = prompt("Scegli pari o dispari").toLowerCase();
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
 
 if (userNumber < 1 || userNumber > 5) {
@@ -22,10 +25,19 @@ if (userNumber < 1 || userNumber > 5) {
 } else {
     console.log("Numero accettato!");
 }
-//---creo la funzione che genera un numero da 1 a 5 e dice se è pari o dispari---
-function isEvenOrOdd(number) {
+//---creo la funzione che genera un numero da 1 a 5 ---
+function randomNumber(number) {
     number = Math.floor(Math.random() * 6) + 1;
-    return number % 2 === 0 ? "pari" : "dispari";
+
+}
+
+function isPari(totale) {
+    // ritorna "pari" o "dispari"
+    if (totale % 2 === 0) {
+        return "pari";
+    } else {
+        return "dispari";
+    }
 }
 
 
@@ -35,10 +47,11 @@ function somma(a, b) {
 }
 
 
-const risultato = somma(userNumber, isEvenOrOdd);
-if (risultato % 2 === 0) {
-    console.log("Hai vinto! Il risultato è pari");
+const risultato = somma(userNumber, randomNumber());
+if (isPari(risultato) === userChoice) {
+    console.log("Hai vinto! Il risultato è " + isPari(risultato));
 } else {
     console.log("Hai perso! Il risultato è dispari");
+
 }
 
