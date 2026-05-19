@@ -1,15 +1,18 @@
-function isPalindroma(parola) {
-    //trasformo la Prima lettera se scritta maiuscola in minuscola
-    const parolaMinuscola = parola.toLowerCase();
-    //con split divido la parola in lettere,con reverse la inverto, con join la trasforma in "parola"
-    const parolaRibaltata = parolaMinuscola.split("").reverse().join("");
-    //se le due parole coincidono allora true
-    return parolaMinuscola === parolaRibaltata;
+function isPalindrome(parola) {
+    const length = parola.length;
 
+    // controlla la metà della stringa confrontando i caratteri speculari
+    for (let i = 0; i < length / 2; i++) {
+        if (parola[i] !== parola[length - 1 - i]) {
+            return false; //  non è un palindromo
+        }
+    }
+    return true; // Tutti i caratteri corrispondono
 }
+
 let parola = prompt("Inserisci una parola");
 if (parola) {
-    console.log(`É Palindroma: ${isPalindroma(parola)}`);
+    console.log(`É Palindroma: ${isPalindrome(parola)}`);
 }
 
 
