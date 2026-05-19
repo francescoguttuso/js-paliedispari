@@ -12,7 +12,8 @@ function isPalindrome(parola) {
 
 let parola = prompt("Inserisci una parola");
 if (parola) {
-    console.log(`É Palindroma: ${isPalindrome(parola)}`);
+    alert(`É Palindroma: ${isPalindrome(parola)}`);
+    console.log(`É Palindroma: ${isPalindrome(parola)}`)
 }
 
 
@@ -21,7 +22,12 @@ if (parola) {
 //chiedo all'utente di inserire un numero da 1 a 5
 
 const userChoice = prompt("Scegli pari o dispari").toLowerCase();
+if (userChoice !== "pari" && userChoice !== "dispari") {
+    alert("Non è una scelta valida"); // controllo se l'utente inserisce pari o dispari   
+}
 const userNumber = parseInt(prompt("Inserisci un numero da 1 a 5"));
+
+
 
 if (userNumber < 1 || userNumber > 5) {
     alert("Non è un numero valido");
