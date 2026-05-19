@@ -27,7 +27,7 @@ if (userNumber < 1 || userNumber > 5) {
 }
 //---creo la funzione che genera un numero da 1 a 5 ---
 function randomNumber(number) {
-    number = Math.floor(Math.random() * 6) + 1;
+    number = Math.floor(Math.random() * 5) + 1;
 
 }
 
@@ -51,7 +51,7 @@ const risultato = somma(userNumber, randomNumber());
 if (isPari(risultato) === userChoice) {
     console.log("Hai vinto! Il risultato è " + isPari(risultato));
 } else {
-    console.log("Hai perso! Il risultato è dispari");
+    console.log("Hai perso! Il risultato è " + isPari(risultato));
 
 }
 
